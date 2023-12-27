@@ -39,12 +39,12 @@ namespace App.ApplicationCore.Services
             _unitOfWork.Repository<Beer>().Add(beer);
             _unitOfWork.Commit();
         }
-        public void DeleteBeer(int beerId)
+        public void DeleteBeer(int BeerId)
         {
-            var beer = _unitOfWork.Repository<Beer>().GetById(beerId);
+            var beer = _unitOfWork.Repository<Beer>().GetById(BeerId);
             if (beer == null)
             {
-                throw new ArgumentException("Beer not found.", nameof(beerId));
+                throw new ArgumentException("Beer not found.", nameof(BeerId));
             }
 
             _unitOfWork.Repository<Beer>().Delete(beer);

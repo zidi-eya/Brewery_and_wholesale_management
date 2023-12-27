@@ -37,6 +37,30 @@ namespace BreweryRestApp.Controllers
         {
             _beerService.addBeerByBrewery(beer, breweryId);
         }
+
+
+
+
+        [HttpDelete("{BeerId}")]
+        public IActionResult DeleteBeer(int BeerId)
+        {
+            try
+            {
+                _beerService.DeleteBeer(BeerId);
+                return NoContent(); // 204 No Content is typically returned for successful delete requests
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message); // 404 Not Found if the beer doesn't exist
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here
+                return BadRequest(ex.Message); // 400 Bad Request for other types of exceptions
+            }
+        }
+
+
     }
 }
 
