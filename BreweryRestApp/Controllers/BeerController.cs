@@ -30,6 +30,13 @@ namespace BreweryRestApp.Controllers
             var beers = _beerService.GetAllBeerbyBrewery(breweryId);
             return Ok(beers);
         }
+
+
+        [HttpPost("AddBeer/{breweryId}")]
+        public void addBeerByBrewery(Beer beer, int breweryId)
+        {
+            _beerService.addBeerByBrewery(beer, breweryId);
+        }
     }
 }
 

@@ -18,7 +18,7 @@ namespace App.ApplicationCore.Entities
 
 
         // Navigation properties for related entities
-        public virtual ICollection<Stock> Stocks { get; set; }
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Stock>? Stocks { get; set; }
+        public virtual ICollection<Sale>? Sales { get; set; }
     }
 }

@@ -18,11 +18,11 @@ namespace App.ApplicationCore.Entities
       
 
         // Navigation property for Brewery
-        public virtual Brewery Brewery { get; set; }
+        public virtual Brewery? Brewery { get; set; }
 
         // Navigation properties for related entities
-        public virtual ICollection<Stock> Stocks { get; set; }
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Stock>? Stocks { get; set; }
+        public virtual ICollection<Sale>? Sales { get; set; }
 
 
 

@@ -31,7 +31,25 @@ namespace App.ApplicationCore.Services
             return _unitOfWork.Repository<Beer>().Find(beer => beer.Brewery.BreweryId == breweryId).ToList();
         }
 
-        
-       
+        public void addBeerByBrewery(Beer beer, int breweryId)
+        {
+            Brewery brewery = _unitOfWork.Repository<Brewery>().GetById(breweryId);
+            beer.Brewery = brewery;
+
+            _unitOfWork.Repository<Beer>().Add(beer);
+            _unitOfWork.Commit();
+        }
+        public void DeleteBeer(int beerId)
+        {
+            var beer = _unitOfWork.Repository<Beer>().GetById(beerId);
+            if (beer == null)
+            {
+                throw new ArgumentException("Beer not found.", nameof(beerId));
+            }
+
+            _unitOfWork.Repository<Beer>().Delete(beer);
+            _unitOfWork.Commit();
+        }
+
     }
 }

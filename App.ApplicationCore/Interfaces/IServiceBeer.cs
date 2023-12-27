@@ -10,6 +10,9 @@ namespace App.ApplicationCore.Interfaces
     public interface IServiceBeer : IService<Beer>
     {
         IList<Beer> GetAllBeerbyBrewery(int breweryId);
+        public void addBeerByBrewery(Beer beer, int breweryId);
+        void DeleteBeer(int beerId);
+
 
     }
 }
