@@ -43,5 +43,9 @@ namespace App.Infrastructure
         {
             dbSet.Update(entity);
         }
+        public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
+        {
+            return dbSet.Where(predicate).ToList();
+        }
     }
 }

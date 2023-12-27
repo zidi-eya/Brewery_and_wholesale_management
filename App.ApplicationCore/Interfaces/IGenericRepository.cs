@@ -12,5 +12,7 @@ namespace App.ApplicationCore.Interfaces
         void Update(T entity);
         void Delete(T entity);
         void Delete(Expression<Func<T, bool>> where);
+        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
+
     }
 }
