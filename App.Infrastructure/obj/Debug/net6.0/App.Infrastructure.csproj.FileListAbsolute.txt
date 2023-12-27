@@ -1,0 +1,17 @@
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.deps.json
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.runtimeconfig.json
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.pdb
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\bin\Debug\net6.0\App.ApplicationCore.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\bin\Debug\net6.0\App.ApplicationCore.pdb
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.csproj.AssemblyReference.cache
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.AssemblyInfoInputs.cache
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.AssemblyInfo.cs
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.csproj.CoreCompileInputs.cache
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.csproj.CopyComplete
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\refint\App.Infrastructure.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.pdb
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.genruntimeconfig.cache
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.Infrastructure\obj\Debug\net6.0\ref\App.Infrastructure.dll

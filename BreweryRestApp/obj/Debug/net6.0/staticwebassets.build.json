@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "M9zKMgXNaMYJrn65NzNwwKe/a9xvSJCG6eEEF3/cNeo=",
+  "Source": "BreweryRestApp",
+  "BasePath": "_content/BreweryRestApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\bin\Debug\net6.0\App.ApplicationCore.deps.json
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\bin\Debug\net6.0\App.ApplicationCore.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\bin\Debug\net6.0\App.ApplicationCore.pdb
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\App.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\App.ApplicationCore.AssemblyInfoInputs.cache
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\App.ApplicationCore.AssemblyInfo.cs
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\App.ApplicationCore.csproj.CoreCompileInputs.cache
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\App.ApplicationCore.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\refint\App.ApplicationCore.dll
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\App.ApplicationCore.pdb
+D:\AZIZ\5SAE\dotnetRev\BreweryRestApp\App.ApplicationCore\obj\Debug\net6.0\ref\App.ApplicationCore.dll
