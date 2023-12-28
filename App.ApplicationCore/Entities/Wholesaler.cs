@@ -22,3 +22,17 @@ namespace App.ApplicationCore.Entities
         public virtual ICollection<Sale>? Sales { get; set; }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,8 @@ namespace App.ApplicationCore.Interfaces
         IList<Beer> GetAllBeerbyBrewery(int breweryId);
         public void addBeerByBrewery(Beer beer, int breweryId);
         void DeleteBeer(int BeerId);
+        public Sale AddBeerSale(int beerId, int wholesalerId);
+
 
 
     }

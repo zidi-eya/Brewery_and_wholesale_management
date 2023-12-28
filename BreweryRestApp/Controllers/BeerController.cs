@@ -59,7 +59,24 @@ namespace BreweryRestApp.Controllers
                 return BadRequest(ex.Message); // 400 Bad Request for other types of exceptions
             }
         }
-
+        [HttpPost("AddSale")]
+        public ActionResult<Sale> AddSale(Sale sale)
+        {
+            try
+            {
+                var newSale = _beerService.AddBeerSale(sale.BeerFK, sale.WholesalerFK);
+                return newSale;
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here
+                return BadRequest(ex.Message);
+            }
+        }
 
     }
 }
