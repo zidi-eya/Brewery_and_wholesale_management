@@ -10,9 +10,8 @@ namespace App.ApplicationCore.Entities
 {
     public class Wholesaler
     {
-        
-        [Key]
 
+        [Key]
         public int WholesalerId { get; set; }
         public string Name { get; set; }
 

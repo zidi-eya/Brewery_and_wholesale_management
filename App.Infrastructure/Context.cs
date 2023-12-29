@@ -12,7 +12,7 @@ namespace App.Infrastructure
 {
     public class Context : DbContext
     {
-        public DbSet<Beer> Beers { get; set; }
+        public DbSet<Wholesaler> Beers { get; set; }
         public DbSet<Brewery> Breweries { get; set; }
         public DbSet<Wholesaler> Wholesalers { get; set; }
         public DbSet<Sale> Sales { get; set; }

@@ -17,6 +17,6 @@ namespace App.ApplicationCore.Entities
 
         // Navigation properties
         public virtual Beer Beer { get; set; }
-        public virtual Wholesaler Wholesaler { get; set; }
+        public virtual Wholesaler? Wholesaler { get; set; }
     }
 }

@@ -4,7 +4,7 @@
 
 namespace App.Infrastructure.Migrations
 {
-    public partial class BreweryDataBase : Migration
+    public partial class BreweryDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,20 +22,7 @@ namespace App.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wholesalers",
-                columns: table => new
-                {
-                    WholesalerId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Wholesalers", x => x.WholesalerId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Beers",
+                name: "Beer",
                 columns: table => new
                 {
                     BeerId = table.Column<int>(type: "int", nullable: false)
@@ -43,17 +30,35 @@ namespace App.Infrastructure.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AlcoholContent = table.Column<float>(type: "real", nullable: false),
                     Price = table.Column<float>(type: "real", nullable: false),
-                    BreweryId = table.Column<int>(type: "int", nullable: false)
+                    BreweryId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Beers", x => x.BeerId);
+                    table.PrimaryKey("PK_Beer", x => x.BeerId);
                     table.ForeignKey(
-                        name: "FK_Beers_Breweries_BreweryId",
+                        name: "FK_Beer_Breweries_BreweryId",
                         column: x => x.BreweryId,
                         principalTable: "Breweries",
-                        principalColumn: "BreweryId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "BreweryId");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Wholesaler",
+                columns: table => new
+                {
+                    WholesalerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BreweryId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Wholesaler", x => x.WholesalerId);
+                    table.ForeignKey(
+                        name: "FK_Wholesaler_Breweries_BreweryId",
+                        column: x => x.BreweryId,
+                        principalTable: "Breweries",
+                        principalColumn: "BreweryId");
                 });
 
             migrationBuilder.CreateTable(
@@ -68,15 +73,15 @@ namespace App.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Sales", x => new { x.BeerFK, x.WholesalerFK, x.SaleId });
                     table.ForeignKey(
-                        name: "FK_Sales_Beers_BeerFK",
+                        name: "FK_Sales_Beer_BeerFK",
                         column: x => x.BeerFK,
-                        principalTable: "Beers",
+                        principalTable: "Beer",
                         principalColumn: "BeerId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Sales_Wholesalers_WholesalerFK",
+                        name: "FK_Sales_Wholesaler_WholesalerFK",
                         column: x => x.WholesalerFK,
-                        principalTable: "Wholesalers",
+                        principalTable: "Wholesaler",
                         principalColumn: "WholesalerId",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -94,22 +99,22 @@ namespace App.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Stocks", x => new { x.WholesalerFK, x.BeerFK, x.StockId });
                     table.ForeignKey(
-                        name: "FK_Stocks_Beers_BeerFK",
+                        name: "FK_Stocks_Beer_BeerFK",
                         column: x => x.BeerFK,
-                        principalTable: "Beers",
+                        principalTable: "Beer",
                         principalColumn: "BeerId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Stocks_Wholesalers_WholesalerFK",
+                        name: "FK_Stocks_Wholesaler_WholesalerFK",
                         column: x => x.WholesalerFK,
-                        principalTable: "Wholesalers",
+                        principalTable: "Wholesaler",
                         principalColumn: "WholesalerId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Beers_BreweryId",
-                table: "Beers",
+                name: "IX_Beer_BreweryId",
+                table: "Beer",
                 column: "BreweryId");
 
             migrationBuilder.CreateIndex(
@@ -121,6 +126,11 @@ namespace App.Infrastructure.Migrations
                 name: "IX_Stocks_BeerFK",
                 table: "Stocks",
                 column: "BeerFK");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Wholesaler_BreweryId",
+                table: "Wholesaler",
+                column: "BreweryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -132,10 +142,10 @@ namespace App.Infrastructure.Migrations
                 name: "Stocks");
 
             migrationBuilder.DropTable(
-                name: "Beers");
+                name: "Beer");
 
             migrationBuilder.DropTable(
-                name: "Wholesalers");
+                name: "Wholesaler");
 
             migrationBuilder.DropTable(
                 name: "Breweries");
