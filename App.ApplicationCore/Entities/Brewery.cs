@@ -18,6 +18,9 @@ namespace App.ApplicationCore.Entities
 
         public virtual ICollection<Wholesaler>? Beers { get; set; }
 
-
+        public static implicit operator Brewery(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

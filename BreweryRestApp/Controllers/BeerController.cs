@@ -23,10 +23,7 @@ namespace BreweryRestApp.Controllers
         [HttpGet("ByBrewery/{breweryId}")]
         public ActionResult<List<Beer>> GetAllBeerByBrewery(int breweryId)
         {
-            // Assuming you have a way to get a Brewery entity by ID,
-            // perhaps using another service or repository method.
-
-
+           
             var beers = _beerService.GetAllBeerbyBrewery(breweryId);
             return Ok(beers);
         }
